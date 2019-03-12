@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import ResourceList from "./ResourceList";
+import UserList from "./UserList";
 
 const App = () => {
   const [resource, setResource] = useState("posts");
 
   return (
     <div className="ui container">
+      <UserList />
       <div>
         <button
           className="ui red basic button"
@@ -19,7 +22,7 @@ const App = () => {
           Todos
         </button>
       </div>
-      {resource}
+      <ResourceList resource={resource} />
     </div>
   );
 };
